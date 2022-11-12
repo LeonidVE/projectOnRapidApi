@@ -13,7 +13,7 @@ export default function MainPage({ currUser }) {
       data.append('image', img);
       const options = {
         method: 'POST',
-        url: 'https://ocr43.p.rapidapi.com/v1/results',
+        url: process.env.RAPID_API_URL,
         headers: {
           'X-RapidAPI-Key': process.env.RAPID_API_KEY,
           'X-RapidAPI-Host': process.env.RAPID_API_HOST,
